@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
 
 body {
     background: #1b1b1b;
+    width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
 }
 
 button {
@@ -20,6 +24,7 @@ button {
   background: transparent;
   color: white;
   transition: all 0.5s ease;
+  font-family: 'Inter', sans-serif;
   &:hover{
       background-color: #23d997;
       color: white;
@@ -46,13 +51,6 @@ h2{
       padding: 3rem 0rem;
       color: #ccc;
       font-size: 1.4rem;
-  }
-  @media screen and (min-width: 1920px) {
-  body {
-    width: 1920px;
-    margin: 0 auto;
-  }
-}
-`;
+  }`;
 
 export default GlobalStyle;

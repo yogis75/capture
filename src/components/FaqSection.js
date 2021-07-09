@@ -1,4 +1,5 @@
 import React from "react";
+import { About, Description, Hide, Image } from "../styles";
 
 const FaqSection = () => {
   return (
