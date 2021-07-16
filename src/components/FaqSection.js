@@ -8,10 +8,10 @@ import { AnimateSharedLayout } from "framer-motion";
 const FaqSection = () => {
   return (
     <Faq>
+      <h2>
+        Any Questions <span>FAQ</span>
+      </h2>
       <AnimateSharedLayout>
-        <h2>
-          Any Questions <span>FAQ</span>
-        </h2>
         <Toggle title="How Do I Start?">
           <div className="question">
             <div className="answer">
