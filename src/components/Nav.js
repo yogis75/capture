@@ -27,12 +27,16 @@ const Nav = () => {
 
 const StyledNav = styled.nav`
   min-height: 10vh;
+  width: 100vw;
   display: flex;
   margin: auto;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
   background: #282828;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   a {
     color: white;
     text-decoration: none;
