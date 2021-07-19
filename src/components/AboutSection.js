@@ -7,11 +7,13 @@ import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
 
+import styled from "styled-components";
+
 const AboutSection = () => {
   return (
     <About>
       <Description>
-        <div className="title">
+        <Title>
           <Hide>
             <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </Hide>
@@ -23,12 +25,12 @@ const AboutSection = () => {
           <Hide>
             <motion.h2 variants={titleAnim}>true</motion.h2>
           </Hide>
-        </div>
-        <motion.p variants={fade}>
+        </Title>
+        <Paragraph variants={fade}>
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills.
-        </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
+        </Paragraph>
+        <Button variants={fade}>Contact Us</Button>
       </Description>
       <Image>
         <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
@@ -37,5 +39,24 @@ const AboutSection = () => {
     </About>
   );
 };
+
+const Button = styled(motion.button)`
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+    margin-left: 8%;
+  }
+`;
+
+const Title = styled.div`
+  @media (max-width: 768px) {
+    padding-left: 8%;
+  }
+`;
+
+const Paragraph = styled(motion.p)`
+  @media (max-width: 768px) {
+    padding-left: 8%;
+  }
+`;
 
 export default AboutSection;

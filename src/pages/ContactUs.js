@@ -67,6 +67,9 @@ const Social = styled(motion.div)`
   align-items: center;
   h2 {
     margin: 2rem;
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
   }
 `;
 export default ContactUs;

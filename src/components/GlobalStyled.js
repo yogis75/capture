@@ -7,6 +7,15 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
+html {
+    @media (max-width: 1300px) {
+        font-size: 80%;
+    }
+    @media (max-width: 786px) {
+        font-size: 0.7rem;
+    }
+}
+
 body {
     background: #1b1b1b;
     width: 100vw;

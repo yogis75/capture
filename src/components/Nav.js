@@ -16,6 +16,11 @@ const Nav = () => {
       <ul>
         <li>
           <Link to="/">1. About Us</Link>
+          <Line2
+            transition={{ dutaion: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/" ? "100%" : "0%" }}
+          />
           <Line
             transition={{ dutaion: 0.75 }}
             initial={{ width: "0%" }}
@@ -24,6 +29,11 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/work">2. Our Work</Link>
+          <Line2
+            transition={{ dutaion: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/work" ? "100%" : "0%" }}
+          />
           <Line
             transition={{ dutaion: 0.75 }}
             initial={{ width: "0%" }}
@@ -32,6 +42,11 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/contact">3. Contact Us</Link>
+          <Line2
+            transition={{ dutaion: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/contact" ? "100%" : "0%" }}
+          />
           <Line
             transition={{ dutaion: 0.75 }}
             initial={{ width: "0%" }}
@@ -62,6 +77,10 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     list-style: none;
+    @media (max-width: 1300px) {
+      padding-top: 1rem;
+      justify-content: space-between;
+    }
   }
   #logo {
     font-size: 1.5rem;
@@ -71,6 +90,16 @@ const StyledNav = styled.nav`
   li {
     padding-left: 10rem;
     position: relative;
+    @media (max-width: 1300px) {
+      padding: 1rem 0 0 0;
+      justify-content: space-between;
+    }
+  }
+  @media (max-width: 1300px) {
+    display: block;
+    h1 {
+      text-align: center;
+    }
   }
 `;
 const Line = styled(motion.div)`
@@ -80,6 +109,22 @@ const Line = styled(motion.div)`
   position: absolute;
   bottom: -80%auto;
   left: 60%;
+  visibility: visible;
+  @media (max-width: 1300px) {
+    left: 0;
+    visibility: hidden;
+  }
 `;
-
+const Line2 = styled(motion.div)`
+  visibility: hidden;
+  @media (max-width: 1300px) {
+    height: 0.3rem;
+    background: #23d997;
+    width: 0;
+    position: absolute;
+    bottom: -80%auto;
+    left: 0;
+    visibility: visible;
+  }
+`;
 export default Nav;

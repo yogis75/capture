@@ -8,6 +8,11 @@ export const About = styled(motion.div)`
   justify-content: space-between;
   padding: 5rem 10rem;
   color: white;
+  @media (max-width: 768px) {
+    display: block;
+    text-align: center;
+    padding: 2rem 4rem;
+  } ;
 `;
 
 export const Description = styled.div`
